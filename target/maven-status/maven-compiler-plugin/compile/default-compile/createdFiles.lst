@@ -1,0 +1,16 @@
+com\mycompany\orkwar\factory\builder\OrkBuilderFactory.class
+com\mycompany\orkwar\ui\componets\OrkInfoPanel.class
+com\mycompany\orkwar\model\OrcDirector.class
+com\mycompany\orkwar\ui\componets\OrkTreePanel.class
+com\mycompany\orkwar\factory\builder\MistyMountainsOrkBuilderFactory.class
+com\mycompany\orkwar\factory\gear\OrcGearFactory.class
+com\mycompany\orkwar\model\Ork.class
+com\mycompany\orkwar\model\OrkBuilder.class
+com\mycompany\orkwar\factory\builder\MordorOrkBuilderFactory.class
+com\mycompany\orkwar\ui\OrkGUI.class
+com\mycompany\orkwar\factory\gear\DolGuldurGearFactory.class
+com\mycompany\orkwar\factory\gear\MistyMountainsGearFactory.class
+com\mycompany\orkwar\model\OrkAttributes.class
+com\mycompany\orkwar\OrkWar.class
+com\mycompany\orkwar\factory\builder\DolGuldurOrkBuilderFactory.class
+com\mycompany\orkwar\factory\gear\MordorGearFactory.class
