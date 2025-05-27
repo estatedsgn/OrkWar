@@ -6,6 +6,7 @@ com\mycompany\orkwar\factory\builder\MistyMountainsOrkBuilderFactory.class
 com\mycompany\orkwar\factory\gear\OrcGearFactory.class
 com\mycompany\orkwar\model\Ork.class
 com\mycompany\orkwar\model\OrkBuilder.class
+com\mycompany\orkwar\model\ConcreteOrkBuilder.class
 com\mycompany\orkwar\factory\builder\MordorOrkBuilderFactory.class
 com\mycompany\orkwar\ui\OrkGUI.class
 com\mycompany\orkwar\factory\gear\DolGuldurGearFactory.class

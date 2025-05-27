@@ -4,6 +4,7 @@
  */
 package com.mycompany.orkwar.factory.builder;
 
+import com.mycompany.orkwar.model.ConcreteOrkBuilder;
 import com.mycompany.orkwar.model.OrkBuilder;
 import com.mycompany.orkwar.factory.gear.MistyMountainsGearFactory;
 import com.mycompany.orkwar.factory.gear.OrcGearFactory;
@@ -14,15 +15,15 @@ public class MistyMountainsOrkBuilderFactory implements OrkBuilderFactory {
 
     @Override
     public OrkBuilder createOrkBuilder() {
-        return new OrkBuilder()
+        return new ConcreteOrkBuilder()
                 .setWeapon(gearFactory.createWeapon())
                 .setArmor(gearFactory.createArmor())
                 .setBanner(gearFactory.createBanner())
                 .setAttributes(new OrkAttributes(
-                        70,
-                        (int) (70 * 1.3), 
-                        15,              
-                        100
+                        (int) (random.nextInt(50) + 30), // Сила: 80–130
+                        (int) (random.nextInt(70) + 20),       // Ловкость: 20–50
+                        (int) (random.nextInt(10) + 10),       // Интеллект: 10–25
+                        (int) (random.nextInt(100) + 100)
                 ));
     }
 }

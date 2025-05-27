@@ -30,10 +30,21 @@ public class OrkInfoPanel extends JPanel {
     }
 
     public void displayOrk(Ork ork) {
+        if (ork == null) {
+            System.out.println("Ошибка: Орк равен null");
+            return;
+        }
+
+        System.out.println("Отображаю орка: " + ork.getName());
+        System.out.println("Характеристики: " + ork.getAttributes());
+
         nameLabel.setText(ork.getName());
         strengthBar.setValue(ork.getAttributes().getStrength());
         dexterityBar.setValue(ork.getAttributes().getDexterity());
         intelligenceBar.setValue(ork.getAttributes().getIntelligence());
         healthBar.setValue(ork.getAttributes().getHealth());
+
+        revalidate();
+        repaint();
     }
 }

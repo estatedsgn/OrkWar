@@ -18,7 +18,7 @@ public class OrkGUI extends JFrame {
     private JButton createButton = new JButton("Создать Орка");
 
     private OrkTreePanel treePanel = new OrkTreePanel();
-    private OrkInfoPanel infoPanel = new OrkInfoPanel();
+    private OrkInfoPanel infoPanel = new OrkInfoPanel(); // Новый экземпляр
 
     private OrcDirector director = new OrcDirector();
 
@@ -37,7 +37,7 @@ public class OrkGUI extends JFrame {
 
         add(controlPanel, BorderLayout.NORTH);
         add(treePanel, BorderLayout.WEST);
-        add(infoPanel, BorderLayout.EAST);
+        add(infoPanel, BorderLayout.EAST); // Новый инстанс
 
         createButton.addActionListener(this::createOrk);
     }
