@@ -35,9 +35,6 @@ public class OrkInfoPanel extends JPanel {
             return;
         }
 
-        System.out.println("Отображаю орка: " + ork.getName());
-        System.out.println("Характеристики: " + ork.getAttributes());
-
         nameLabel.setText(ork.getName());
         strengthBar.setValue(ork.getAttributes().getStrength());
         dexterityBar.setValue(ork.getAttributes().getDexterity());
