@@ -4,10 +4,10 @@
  */
 package com.mycompany.orkwar.factory.builder;
 
+
+
 import com.mycompany.orkwar.model.OrkBuilder;
-import java.util.Random;
 
 public interface OrkBuilderFactory {
-    Random random = new Random();
     OrkBuilder createOrkBuilder();
 }

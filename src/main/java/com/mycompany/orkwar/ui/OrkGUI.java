@@ -10,6 +10,8 @@ import com.mycompany.orkwar.ui.componets.*;
 import java.awt.BorderLayout;
 
 import javax.swing.*;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.awt.event.ActionEvent;
 
 public class OrkGUI extends JFrame {
@@ -18,7 +20,7 @@ public class OrkGUI extends JFrame {
     private JButton createButton = new JButton("Создать Орка");
 
     private OrkTreePanel treePanel = new OrkTreePanel();
-    private OrkInfoPanel infoPanel = new OrkInfoPanel(); // Новый экземпляр
+    private OrkInfoPanel infoPanel = new OrkInfoPanel();
 
     private OrcDirector director = new OrcDirector();
 
@@ -37,7 +39,15 @@ public class OrkGUI extends JFrame {
 
         add(controlPanel, BorderLayout.NORTH);
         add(treePanel, BorderLayout.WEST);
-        add(infoPanel, BorderLayout.EAST); // Новый инстанс
+        add(infoPanel, BorderLayout.EAST);
+
+        treePanel.addPropertyChangeListener("selectedOrk", new PropertyChangeListener() {
+            @Override
+            public void propertyChange(PropertyChangeEvent evt) {
+                Ork ork = (Ork) evt.getNewValue();
+                infoPanel.displayOrk(ork);
+            }
+        });
 
         createButton.addActionListener(this::createOrk);
     }
@@ -65,7 +75,7 @@ public class OrkGUI extends JFrame {
         };
 
         treePanel.addOrkToTribe(tribe, ork);
-        infoPanel.displayOrk(ork);
+        infoPanel.displayOrk(ork); // Обновление UI сразу после создания
     }
 
     public static void main(String[] args) {

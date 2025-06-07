@@ -27,6 +27,6 @@ public class Ork {
 
     @Override
     public String toString() {
-        return name + " [" + weapon + ", " + armor + ", " + banner + ", " + attributes + "]";
+        return name;
     }
 }

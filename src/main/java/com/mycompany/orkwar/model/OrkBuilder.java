@@ -4,8 +4,6 @@
  */
 package com.mycompany.orkwar.model;
 
-
-
 import com.github.javafaker.Faker;
 
 public abstract class OrkBuilder {
@@ -19,8 +17,6 @@ public abstract class OrkBuilder {
     public abstract OrkBuilder setWeapon(String weapon);
     public abstract OrkBuilder setArmor(String armor);
     public abstract OrkBuilder setBanner(String banner);
-    
-    public abstract String getBanner();
     public abstract OrkBuilder setAttributes(OrkAttributes attributes);
 
     public Ork build() {
@@ -28,5 +24,9 @@ public abstract class OrkBuilder {
             this.name = new Faker().lordOfTheRings().character();
         }
         return new Ork(name, weapon, armor, banner, attributes);
+    }
+
+    public String getBanner() {
+        return this.banner;
     }
 }
